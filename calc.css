@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+*:focus {
+  outline: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 .parent{
 
@@ -18,15 +25,6 @@
     background-color:#eeccff ;
     transition: 2s;
 }
-i{
-    font-size: 35px;
-    color: gray;
-    position: absolute;
-    top: 5%;
-    right: 10%;
-    cursor: pointer;
-}
-
 
 .cl{
     width: 470px;
@@ -41,12 +39,20 @@ i{
     position: relative;
 }
     
+i{
+    font-size: 35px;
+    color: gray;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+}
 
 #display{
     background-color: #ebf4f3;
     padding: 15px;
     width: 370px;
-    height: 70px;
+    height: 90px;
     border: solid 3px whitesmoke;
     border-radius: 25px;
     box-shadow: 5px 5px 10px  rgb(0,0,0,0.15);
@@ -54,10 +60,6 @@ i{
     font-size: 30px;
     letter-spacing: 2px;
     text-align: right;
-}
-#display:focus{
-    outline: none;
-
 }
 
 .buttons{
@@ -82,11 +84,10 @@ div button{
      box-shadow: 5px 5px 10px  rgb(0,0,0,0.25);
      cursor: pointer; 
 }
-div button:hover{
+div button:active{
     background-color: #ecf0f3;
      
 }
-
 .btn:active{
     transform: scale(0.9);
 }
@@ -107,28 +108,30 @@ button:last-child{
      
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px){    
+                                                                                                                  
+i {
+       font-size: 27px; }
 .cl {
-        width: 320px;
-        height: 550px;
-    }
-    #display {
-        width: 280px;
-        height: 50px;
+        width: 325px;
+        height: 565px; }
+#display {
+        width: 260px;
+        height: 55px;
+        margin-top: 15px;
         font-size: 22px;
-    }
-    .buttons {
+        letter-spacing: 1.5px; }
+.buttons {
         width: 300px;
         height: 350px;
-        gap: 15px;
-        grid-template-columns: repeat(4, auto); 
-    }
-    div button {
+        gap: 15px; }
+div button {
         width: 50px;
         height: 50px;
-        font-size: 20px;
-    }
-    button:last-child {
+        font-size: 20px;  }
+.op{
+    font-size: 22px;}        
+button:last-child {
         width: 110px;   }
 
 }
